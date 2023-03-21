@@ -1,0 +1,87 @@
+
+  .tabs-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .tab-btn {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  .tab {
+    width: 50%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .tab.active {
+    z-index: 1;
+  }
+  
+  .tab-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 6px 12px;
+  }
+  
+  .tab1 .tab-content {
+    opacity: 1;
+    height: 100%;
+    width: 80%;
+    z-index: 2;
+  }
+  
+  .tab2 .tab-content {
+    opacity: 0.2;
+    height: 80%;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .tab1:hover .tab-content {
+    opacity: 1;
+    height: 100%;
+    width: 80%;
+  }
+  
+  .tab1:hover ~ .tab2 .tab-content {
+    opacity: 0.2;
+    height: 80%;
+    width: 20%;
+  }
+  
+  .tab2:hover .tab-content {
+    opacity: 1;
+    height: 100%;
+    width: 80%;
+  }
+  
+  .tab2:hover ~ .tab1 .tab-content {
+    opacity: 0.2;
+    height: 80%;
+    width: 20%;
+  }
+  
+  .tab.active ~ .tab .tab-content {
+    opacity: 0.2;
+    height: 80%;
+    width: 20%;
+  }
+  
+  .tab.active:hover .tab-content {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+  }
